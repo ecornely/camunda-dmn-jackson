@@ -1,0 +1,10 @@
+/target/
+.classpath
+.project
+.settings
+*~
+.idea
+/nitrilin.iml
+.vscode
+.editorconfig
+.tern-project

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="definitions_0uyevuk" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="TenantCustomisations" name="DetermineCustomisationWorkflows">
+    <decisionTable id="decisionTable">
+      <input id="input1" label="Template name" camunda:inputVariable="">
+        <inputExpression id="inputExpression1" typeRef="string">        <text>${templateName}</text>
+</inputExpression>
+      </input>
+      <output id="output1" label="Pre-customisation workflow id" name="precustomisationWorkflowId" typeRef="string" />
+      <output id="OutputClause_00o39g6" label="Customisation workflow id" name="customisationWorkflowId" typeRef="string" />
+      <output id="OutputClause_0fuhnlo" label="Post-customisation workflow id" name="postcustomisationWorkflowId" typeRef="string" />
+      <rule id="row-652616538-1">
+        <description></description>
+        <inputEntry id="UnaryTests_0zh67al">        <text><![CDATA["template_win2k16"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0kbyyg6">        <text><![CDATA["be.nrb.o2.hc.customisation.windows.2016.PreCustomisation"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1y7ppqj">        <text><![CDATA["be.nrb.o2.hc.customisation.windows.2016.Customisation"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0yf63u2">        <text><![CDATA["be.nrb.o2.hc.customisation.windows.2016.PostCustomisation"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-652616538-2">
+        <inputEntry id="UnaryTests_1yohdk0">        <text><![CDATA["template_win2k12r2"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0k8k2kq">        <text><![CDATA["be.nrb.o2.hc.customisation.windows.2012.PreCustomisation"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0v3ire3">        <text><![CDATA["be.nrb.o2.hc.customisation.windows.2012.Customisation"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1otox33">        <text><![CDATA["be.nrb.o2.hc.customisation.windows.2012.PostCustomisation"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-19465308-1">
+        <inputEntry id="UnaryTests_1t00z3w">        <text><![CDATA["template_rhel74"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1ibx02b">        <text><![CDATA["be.nrb.o2.hc.customisation.linux.RHEL.PreCustomisation"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1thkn9x">        <text><![CDATA["be.nrb.o2.hc.customisation.linux.RHEL.Customisation"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0uemxgf">        <text><![CDATA["be.nrb.o2.hc.customisation.linux.RHEL.PostCustomisation"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-19465308-2">
+        <inputEntry id="UnaryTests_0cfno5y">        <text><![CDATA["template_rhel69"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1vf0rff">        <text><![CDATA["be.nrb.o2.hc.customisation.linux.RHEL.PreCustomisation"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1cd7ij8">        <text><![CDATA["be.nrb.o2.hc.customisation.linux.RHEL.Customisation"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1jg9lor">        <text><![CDATA["be.nrb.o2.hc.customisation.linux.RHEL.PostCustomisation"]]></text>
+</outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
