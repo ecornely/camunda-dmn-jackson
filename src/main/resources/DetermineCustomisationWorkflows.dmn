@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="definitions_0uyevuk" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="definitions_0uyevuk" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
   <decision id="TenantCustomisations" name="DetermineCustomisationWorkflows">
+    <extensionElements>
+      <biodi:bounds x="200" y="200" width="180" height="80" />
+    </extensionElements>
     <decisionTable id="decisionTable">
       <input id="input1" label="Template name" camunda:inputVariable="">
         <inputExpression id="inputExpression1" typeRef="string">        <text>${templateName}</text>
@@ -51,5 +54,22 @@
 </outputEntry>
       </rule>
     </decisionTable>
+  </decision>
+  <decision id="be.nrb.o2.Customisation" name="Customisation">
+    <extensionElements>
+      <biodi:bounds x="309" y="346" width="180" height="80" />
+      <biodi:edge source="TenantCustomisations">
+        <biodi:waypoints x="330" y="280" />
+        <biodi:waypoints x="396" y="346" />
+      </biodi:edge>
+    </extensionElements>
+    <variable id="InformationItem_1swm5hr" name="customisation" typeRef="be.nrb.o2.Customisation" />
+    <informationRequirement>
+      <requiredDecision href="#TenantCustomisations" />
+    </informationRequirement>
+    <literalExpression id="LiteralExpression_1pjc3ak" expressionLanguage="javascript">    <text><![CDATA[var Customisation = Java.type("be.nrb.o2.Customisation");
+var c = new Customisation(precustomisationWorkflowId, customisationWorkflowId,postcustomisationWorkflowId);
+c;]]></text>
+</literalExpression>
   </decision>
 </definitions>

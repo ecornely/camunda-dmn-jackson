@@ -15,14 +15,7 @@
       <bpmn:outgoing>SequenceFlow_0iqdc9n</bpmn:outgoing>
       <bpmn:script><![CDATA[execution.setVariable("templateName", "template_rhel74");]]></bpmn:script>
     </bpmn:scriptTask>
-    <bpmn:businessRuleTask id="Task_09iy3jw" name="Perform DMN" camunda:asyncBefore="true" camunda:asyncAfter="true" camunda:resultVariable="workflowIds" camunda:decisionRef="TenantCustomisations">
-      <bpmn:extensionElements>
-        <camunda:inputOutput>
-          <camunda:outputParameter name="precustomisationWorkflowId"><![CDATA[${workflowIds.get(0).get("precustomisationWorkflowId")}]]></camunda:outputParameter>
-          <camunda:outputParameter name="customisationWorkflowId"><![CDATA[${workflowIds.get(0).get("customisationWorkflowId")}]]></camunda:outputParameter>
-          <camunda:outputParameter name="postcustomisationWorkflowId"><![CDATA[${workflowIds.get(0).get("postcustomisationWorkflowId")}]]></camunda:outputParameter>
-        </camunda:inputOutput>
-      </bpmn:extensionElements>
+    <bpmn:businessRuleTask id="Task_09iy3jw" name="Perform DMN" camunda:asyncBefore="true" camunda:asyncAfter="true" camunda:resultVariable="workflowIds" camunda:decisionRef="be.nrb.o2.Customisation" camunda:mapDecisionResult="singleResult">
       <bpmn:incoming>SequenceFlow_0iqdc9n</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0ml3uxy</bpmn:outgoing>
     </bpmn:businessRuleTask>

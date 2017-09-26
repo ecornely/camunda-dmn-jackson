@@ -26,6 +26,8 @@ public class LoggerDelegate implements JavaDelegate {
             + ", executionId=" + execution.getId()
             + " \n\n");
     
+    LOGGER.warning("The value of workflowIds:"+execution.getVariable("workflowIds"));
+    
     LOGGER.warning("The value of precustomisationWorkflowId:"+execution.getVariable("precustomisationWorkflowId")
             + ", customisationWorkflowId="+execution.getVariable("customisationWorkflowId")
             + ", postcustomisationWorkflowId="+execution.getVariable("postcustomisationWorkflowId"));
