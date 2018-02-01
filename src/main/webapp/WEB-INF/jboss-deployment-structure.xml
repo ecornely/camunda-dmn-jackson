@@ -9,8 +9,8 @@
     </exclusions>
     <dependencies>
       <module name="org.camunda.bpm.camunda-engine" />
-      <module name="com.fasterxml.jackson.core.jackson-databind" slot="2.9.1" />
-      <module name="com.fasterxml.jackson.datatype.jackson-datatype-jsr310" export="true" slot="2.9.1" />
+      <module name="com.fasterxml.jackson.core.jackson-databind" slot="2.8.8" />
+      <module name="com.fasterxml.jackson.datatype.jackson-datatype-jsr310" export="true" slot="2.8.8" />
       <module name="be.nrb.o2.oxygen-jackson-json" export="true" slot="1.0" />
     </dependencies>
   </deployment>
